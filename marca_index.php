@@ -18,7 +18,14 @@
             <div class="content">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <div class="box box-primary">
+                        <?php if (!empty($_SESSION['mensaje'])) { ?>
+                        <div class="alert alert-danger" role="alert" id="mensaje">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            <?php echo $_SESSION['mensaje'];
+                            $_SESSION['mensaje'] = ''; ?>
+                            </div>
+                            <?php } ?>
+                            <div class="box box-primary">
                             <div class="box-header">
                                 <i class="ion ion-clipboard"></i>
                                 <h3 class="box-title">Marcas</h3>
