@@ -1,14 +1,25 @@
 <?php
 require 'clases/conexion.php';
 
-$sql="insert into marca (mar_cod, mar_descri)"
-. "values ((select coalesce(max(mar_cod), 0) + 1 from marca),'".$_REQUEST['vmar_descri']."')";
-
 session_start();
+
+switch ($_REQUEST['accion']) {
+    case 1:
+        $sql="insert into marca (mar_cod, mar_descri)"
+        . "values ((select coalesce(max(mar_cod), 0) + 1 from marca),'".$_REQUEST['vmar_descri']."')";
+        $mensaje='Guardado exitosamente';
+        break;
+    case 2:
+        $sql="update marca set mar_descri='".$_REQUEST['vmar_descri']."' where mar_cod=".$_REQUEST['vmar_cod'];
+        $mensaje='Actualizado exitosamente';
+        break;
+}
+
 if (consultas::ejecutar_sql($sql)) {
-    $_SESSION['mensaje']="Marca registrada correctamente";
+    $_SESSION['mensaje']=$mensaje;
     header("location: marca_index.php");
 } else {
-    $_SESSION['mensaje']="Error al registrar \n". $sql;
+    $_SESSION['mensaje']="Error ". $sql;
     header("location: marca_index.php");
 }
+?>
