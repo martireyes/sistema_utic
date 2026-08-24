@@ -54,7 +54,7 @@
                                                     <tr>
                                                         <td data-title="Descripción"><?php echo $mar['mar_descri'];?></td>
                                                         <td data-title="Acciones" class="text-center">
-                                                            <a href="#" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
+                                                            <a href="marca_edit.php?vmar_cod=<?php echo $mar['mar_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-edit"></span>
                                                             </a>
                                                             <a href="#" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
@@ -84,5 +84,10 @@
     <?php require 'menu/footer_lte.ctp'; ?>
 </div>
 <?php require 'menu/js_lte.ctp'; ?>
+<script>
+    $("#mensaje").delay(4000).slideUp(200, function () {
+        $(this).alert('close');
+    });
+</script>
 </body>
 </html>
