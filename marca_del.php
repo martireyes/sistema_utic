@@ -20,8 +20,8 @@
                     <div class="col-lg-12 col-md-12 col-xs-12">
                         <div class="box box-primary">
                             <div class="box-header">
-                                <i class="ion ion-plus"></i>
-                                <h3 class="box-title">Editar Marca</h3>
+                                <i class="ion ion-trash-b"></i>
+                                <h3 class="box-title">Eliminar Marca</h3>
                                 <div class="box-tools">
                                     <a href="marca_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
@@ -34,14 +34,14 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">Descripción</label>
                                         <div class="col-lg-10">
-                                            <input type="hidden" name="accion" value="2">
-                                            <input type="hidden" name="vmar_cod" value="<?php echo $resultado[0]['mar_cod']?>">
-                                            <input type="text" class="form-control" name="vmar_descri" value="<?php echo $resultado[0]['mar_descri']?>" required autofocus="">
+                                            <input type="hidden" name="accion" value="3">
+                                            <input type="hidden" name="vmar_cod" value="<?php echo $resultado[0]['mar_cod'];?>">
+                                            <input type="text" class="form-control" name="vmar_descri" value="<?php echo $resultado[0]['mar_descri'];?>" disabled>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Modificar</button>
+                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Eliminar</button>
                                 </div>
                             </form>
                         </div>

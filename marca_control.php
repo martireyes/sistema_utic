@@ -13,6 +13,10 @@ switch ($_REQUEST['accion']) {
         $sql="update marca set mar_descri='".$_REQUEST['vmar_descri']."' where mar_cod=".$_REQUEST['vmar_cod'];
         $mensaje='Actualizado exitosamente';
         break;
+    case 3:
+        $sql="delete from marca where mar_cod =".$_REQUEST['vmar_cod'];
+        $mensaje='Eliminado exitosamente';
+        break;
 }
 
 if (consultas::ejecutar_sql($sql)) {

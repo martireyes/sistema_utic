@@ -21,27 +21,25 @@
                         <div class="box box-primary">
                             <div class="box-header">
                                 <i class="ion ion-plus"></i>
-                                <h3 class="box-title">Editar Marca</h3>
+                                <h3 class="box-title">Agregar Cargos</h3>
                                 <div class="box-tools">
-                                    <a href="marca_index.php" class="btn btn-primary pull-right btn-sm">
+                                    <a href="control_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
                                     </a>
                                 </div>
                             </div>
-                            <form action="marca_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
+                            <form action="cargo_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
                                 <div class="box-body">
-                                    <?php $resultado=consultas::get_datos("select * from marca" . " where mar_cod=".$_GET['vmar_cod'])?>
                                     <div class="form-group">
+                                        <input type="hidden" name="accion" value="1">
                                         <label class="col-lg-2 control-label">Descripción</label>
-                                        <div class="col-lg-10">
-                                            <input type="hidden" name="accion" value="2">
-                                            <input type="hidden" name="vmar_cod" value="<?php echo $resultado[0]['mar_cod']?>">
-                                            <input type="text" class="form-control" name="vmar_descri" value="<?php echo $resultado[0]['mar_descri']?>" required autofocus="">
+                                        <div class="col-lg-5">
+                                            <input type="text" name="vcar_descri" class="form-control" required autofocus="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Modificar</button>
+                                    <button type=="submit" class="btn btn-primary pull-right">Registrar</button>
                                 </div>
                             </form>
                         </div>
