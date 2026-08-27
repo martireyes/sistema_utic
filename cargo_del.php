@@ -20,26 +20,28 @@
                     <div class="col-lg-12 col-md-12 col-xs-12">
                         <div class="box box-primary">
                             <div class="box-header">
-                                <i class="ion ion-plus"></i>
-                                <h3 class="box-title">Agregar Cargos</h3>
+                                <i class="ion ion-trash-b"></i>
+                                <h3 class="box-title">Eliminar Cargo</h3>
                                 <div class="box-tools">
-                                    <a href="control_index.php" class="btn btn-primary pull-right btn-sm">
+                                    <a href="cargo_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
                                     </a>
                                 </div>
                             </div>
                             <form action="cargo_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
                                 <div class="box-body">
+                                    <?php $resultado=consultas::get_datos("select * from cargo" . " where car_cod=".$_GET['vcar_cod'])?>
                                     <div class="form-group">
-                                        <input type="hidden" name="accion" value="1">
                                         <label class="col-lg-2 control-label">Descripción</label>
-                                        <div class="col-lg-5">
-                                            <input type="text" name="vcar_descri" class="form-control" required autofocus="">
+                                        <div class="col-lg-10">
+                                            <input type="hidden" name="accion" value="3">
+                                            <input type="hidden" name="vcar_cod" value="<?php echo $resultado[0]['car_cod'];?>">
+                                            <input type="text" class="form-control" name="vcar_descri" value="<?php echo $resultado[0]['car_descri'];?>" disabled>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right">Registrar</button>
+                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Eliminar</button>
                                 </div>
                             </form>
                         </div>
