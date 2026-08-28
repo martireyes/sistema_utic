@@ -8,13 +8,13 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
         <?php
         session_start();
-        require '../../menu/css_lte.ctp'; ?>
+        require 'menu/css_lte.ctp'; ?>
         
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        <?php require '../../menu/header_lte.ctp'; ?>
-        <?php require '../../menu/toolbar_lte.ctp';?>
+        <?php require 'menu/header_lte.ctp'; ?>
+        <?php require 'menu/toolbar_lte.ctp';?>
         <div class="content-wrapper">
             <div class="content">
                 <div class="row">
@@ -82,9 +82,9 @@
             </div>
         </div>
     </div>
-    <?php require '../../menu/footer_lte.ctp'; ?>
+    <?php require 'menu/footer_lte.ctp'; ?>
 </div>
-<?php require '../../menu/js_lte.ctp'; ?>
+<?php require 'menu/js_lte.ctp'; ?>
 <script>
     $("#mensaje").delay(4000).slideUp(200, function () {
         $(this).alert('close');
