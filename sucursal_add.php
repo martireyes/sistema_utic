@@ -12,7 +12,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        <?php require 'menu/header_lte.ctp';?>
+        <?php require 'menu/header_lte.ctp'; ?>
         <?php require 'menu/toolbar_lte.ctp';?>
         <div class="content-wrapper">
             <div class="content">
@@ -21,20 +21,20 @@
                         <div class="box box-primary">
                             <div class="box-header">
                                 <i class="ion ion-plus"></i>
-                                <h3 class="box-title">Agregar Cargos</h3>
+                                <h3 class="box-title">Agregar Sucursal</h3>
                                 <div class="box-tools">
-                                    <a href="cargo_index.php" class="btn btn-primary pull-right btn-sm">
+                                    <a href="sucursal_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
                                     </a>
                                 </div>
                             </div>
-                            <form action="cargo_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
+                            <form action="sucursal_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
                                 <div class="box-body">
                                     <div class="form-group">
                                         <input type="hidden" name="accion" value="1">
                                         <label class="col-lg-2 control-label">Descripción</label>
                                         <div class="col-lg-5">
-                                            <input type="text" name="vcar_descri" class="form-control" required autofocus="">
+                                            <input type="text" name="vsuc_descri" class="form-control" required autofocus="">
                                         </div>
                                     </div>
                                 </div>
