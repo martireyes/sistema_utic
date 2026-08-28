@@ -12,7 +12,7 @@ class Conectar
 
 class consultas extends Conectar
 {
-	public static function get_datos($sql)
+	public static function get_datos(string $sql)
 	{
         $res = pg_query(parent::con(), $sql) or die($sql.'<br>'. utf8_decode(pg_last_error()));
         if(isset($res)){
@@ -28,7 +28,7 @@ class consultas extends Conectar
                             }
                             }
 
-        public static function ejecutar_sql($sql)
+        public static function ejecutar_sql(string $sql)
         {
             if(pg_query(parent::con(), $sql)){
 				return true;
