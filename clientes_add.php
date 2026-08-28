@@ -34,7 +34,7 @@
                                         <input type="hidden" name="accion" value="1">
                                         <label class="col-lg-2 control-label">Cédula</label>
                                         <div class="col-lg-5">
-                                            <input type="text" name="vcli_ci" class="form-control" required autofocus="">
+                                            <input type="number" name="vcli_ci" class="form-control" required autofocus="">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -42,6 +42,27 @@
                                         <label class="col-lg-2 control-label">Nombre</label>
                                         <div class="col-lg-5">
                                             <input type="text" name="vcli_nombre" class="form-control" required autofocus="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="accion" value="1">
+                                        <label class="col-lg-2 control-label">Apellido</label>
+                                        <div class="col-lg-5">
+                                            <input type="text" name="vcli_apellido" class="form-control" required autofocus="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="accion" value="1">
+                                        <label class="col-lg-2 control-label">Teléfono</label>
+                                        <div class="col-lg-5">
+                                            <input type="text" name="vcli_telefono" class="form-control" required autofocus="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="accion" value="1">
+                                        <label class="col-lg-2 control-label">Dirección particular</label>
+                                        <div class="col-lg-5">
+                                            <input type="text" name="vcli_direccion" class="form-control" required autofocus="">
                                         </div>
                                     </div>
                                 </div>
