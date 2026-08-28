@@ -5,7 +5,7 @@
         <title>LP3</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="/lp3/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
         <?php
         session_start();
         require 'menu/css_lte.ctp'; ?>

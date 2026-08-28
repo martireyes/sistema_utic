@@ -22,8 +22,7 @@
             <li class="header">Men&uacute; principal</li>
             <li><a href="/lp3/menu.php"><span class="glyphicon glyphicon-home"></span><strong>Inicio</strong></a></li>
             <?php
-            $modulos=consultas::get_datos("select * from modulos
-            order by mod_cod");
+            $modulos=consultas::get_datos("select * from modulos order by mod_cod");
             foreach ($modulos as $modulo) { ?>
             <li class="treeview">
                 <a href="">
