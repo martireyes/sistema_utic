@@ -20,19 +20,19 @@
         </form>
         <ul class="sidebar-menu">
             <li class="header">Men&uacute; principal</li>
-            <li><a href="/lp3/menu.php"><span class="glyphicon glyphicon-home"></span><strong>Inicio</strong></a></li>
+            <li><a href="menu.php"><span class="glyphicon glyphicon-home"></span><strong>Inicio</strong></a></li>
             <?php
             $modulos=consultas::get_datos("select * from modulos order by mod_cod");
             foreach ($modulos as $modulo) { ?>
             <li class="treeview">
                 <a href="">
-                    <i class="fa fa-list"></i><span><?php echo $modulo['mod_nombre']?></span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-list"></i><span><?php echo $modulo['mod_nombre']?></span><i class="fa fa-angle-left pull-right"></i>
                 </a>
         <?php
         $paginas=consultas::get_datos("select * from paginas a join modulos b on a.mod_cod=b.mod_cod where mod_nombre='".$modulo['mod_nombre']."' order by pag_nombre");
         ?>
         <ul class="treeview-menu">
-            <?php foreach ($paginas as $pagina) { ?>
+            <?php  foreach ($paginas as $pagina) { ?>
             <li><a href="<?php echo $pagina['pag_direc']?>"><i class="fa fa-circle-o"></i> <?php echo $pagina['pag_nombre']?></a></li>
             <?php };?>
         </ul>

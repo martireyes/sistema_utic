@@ -19,10 +19,10 @@
                     </li>
                     <li class="user-footer">
                         <div class="pull-left">
-                            <a href="/lp3/perfil.php" class="btn btn-default">Perfil</a>
+                            <a href="perfil.php" class="btn btn-default">Perfil</a>
                         </div>
                         <div class="pull-right">
-                            <a href="/lp3" class="btn btn-default">Salir</a>
+                            <a href="index.php" class="btn btn-default">Salir</a>
                         </div>
                     </li>
                 </ul>
