@@ -1,7 +1,5 @@
 <?php 
 require './clases/conexion.php';
-//echo $_REQUEST['usuario']."<br>";
-//echo $_REQUEST['clave'];
 $sql="select * from v_usuarios where usu_nick= '".$_REQUEST['usuario']."' and usu_clave = md5('".$_REQUEST['clave']."')";
 
 $resultado=consultas::get_datos($sql);

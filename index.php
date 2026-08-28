@@ -9,7 +9,7 @@ if ($_SESSION){
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Acceso</title>
+        <title>LP3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <style>
