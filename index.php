@@ -12,6 +12,7 @@ if ($_SESSION){
         <title>LP3</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
         <style>
         body {
             padding-top: 40px;
