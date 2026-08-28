@@ -73,7 +73,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Modificar</button>
+                                    <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Modificar</button>
                                 </div>
                             </form>
                         </div>

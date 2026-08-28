@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right">Registrar</button>
+                                    <button type="submit" class="btn btn-primary pull-right">Registrar</button>
                                 </div>
                             </form>
                         </div>

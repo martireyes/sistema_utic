@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type=="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Eliminar</button>
+                                    <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-floppy-o"></i> Eliminar</button>
                                 </div>
                             </form>
                         </div>
