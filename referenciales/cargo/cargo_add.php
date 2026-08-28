@@ -8,12 +8,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="/lp3/favicon.ico">
         <?php
         session_start();
-        require 'menu/css_lte.ctp'; ?>
+        require __DIR__ . '/menu/css_lte.ctp'; ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        <?php require 'menu/header_lte.ctp'; ?>
-        <?php require 'menu/toolbar_lte.ctp';?>
+        <?php require __DIR__ . '/menu/header_lte.ctp'; ?>
+        <?php require __DIR__ . '/menu/toolbar_lte.ctp';?>
         <div class="content-wrapper">
             <div class="content">
                 <div class="row">
@@ -48,8 +48,8 @@
             </div>
         </div>
     </div>
-    <?php require 'menu/footer_lte.ctp'; ?>
+    <?php require __DIR__ . '/menu/footer_lte.ctp'; ?>
 </div>
-<?php require 'menu/js_lte.ctp'; ?>
+<?php require __DIR__ . '/menu/js_lte.ctp'; ?>
 </body>
 </html>
