@@ -21,7 +21,7 @@
                         <div class="box box-primary">
                             <div class="box-header">
                                 <i class="ion ion-plus"></i>
-                                <h3 class="box-title">Editar Usuario</h3>
+                                <h3 class="box-title">Editar Usuarios</h3>
                                 <div class="box-tools">
                                     <a href="usuario_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
@@ -30,21 +30,65 @@
                             </div>
                             <form action="usuario_control.php" method="post" accept-charset="utf-8" class="form-horizontal">
                                 <div class="box-body">
-                                    <?php $resultado=consultas::get_datos("select * from deposito" . " where dep_cod=".$_GET['vdep_cod'])?>
+                                    <?php $resultado=consultas::get_datos("select * from usuarios" . " where usu_cod=".$_GET['vusr_cod'])?>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">Descripción</label>
+                                        <label class="col-lg-2 control-label">User Name</label>
                                         <div class="col-lg-10">
                                             <input type="hidden" name="accion" value="2">
-                                            <input type="hidden" name="vdep_cod" value="<?php echo $resultado[0]['dep_cod']?>">
-                                            <input type="text" class="form-control" name="vdep_descri" value="<?php echo $resultado[0]['dep_descri']?>" required autofocus="">
+                                            <input type="hidden" name="vusr_cod" value="<?php echo $resultado[0]['usu_cod']?>">
+                                            <input type="text" class="form-control" name="vusr_nick" value="<?php echo $resultado[0]['usu_nick']?>" required autofocus="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-2 control-label">Empleado</label>
+                                        <div class="col-lg-10">
+                                            <input type="hidden" name="accion" value="2">
+                                            <input type="hidden" name="vusr_cod" value="<?php echo $resultado[0]['usu_cod']?>">
+                                            <select name="vusr_empleado" class="form-control" required>
+                                                <?php
+                                                $empleados = consultas::get_datos("SELECT emp_cod, emp_nombre FROM empleado ORDER BY emp_nombre");
+                                                foreach ($empleados as $empleado) {
+                                                    $selected = ($empleado['emp_cod'] ==
+                                                    $resultado[0]['emp_cod'])? 'selected': '';
+                                                    echo "<option value='".$empleado['emp_cod']."'
+                                                    $selected>". $empleado['emp_nombre']. "</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-2 control-label">Grupo de empleados</label>
+                                        <div class="col-lg-10">
+                                            <input type="hidden" name="accion" value="2">
+                                            <input type="hidden" name="vusr_cod" value="<?php echo $resultado[0]['usu_cod']?>">
+                                            <select name="vusr_grupo" class="form-control" required>
+                                                <?php
+                                                $grupos = consultas::get_datos("SELECT gru_cod, gru_nombre FROM grupos ORDER BY gru_nombre");
+                                                foreach ($grupos as $grupo) {
+                                                    $selected = ($grupo['gru_cod'] ==
+                                                    $resultado[0]['gru_cod'])? 'selected': '';
+                                                    echo "<option value='".$grupo['gru_cod']."'
+                                                    $selected>". $grupo['gru_nombre']. "</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-2 control-label">Password</label>
+                                        <div class="col-lg-10">
+                                            <input type="hidden" name="accion" value="2">
+                                            <input type="hidden" name="vusr_cod" value="<?php echo $resultado[0]['usu_cod']?>">
+                                            <input type="password" class="form-control" name="vusr_pass" value="<?php echo $resultado[0]['usu_clave']?>">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">Sucursal</label>
                                         <div class="col-lg-10">
                                             <input type="hidden" name="accion" value="2">
-                                            <input type="hidden" name="vdep_cod" value="<?php echo $resultado[0]['dep_cod']?>">
-                                            <select name="vdep_sucursal" class="form-control" required>
+                                            <input type="hidden" name="vusr_cod" value="<?php echo $resultado[0]['usu_cod']?>">
+                                            <select name="vusr_sucursal" class="form-control" required>
                                                 <?php
                                                 $sucursales = consultas::get_datos("SELECT id_sucursal, suc_descri FROM sucursal ORDER BY suc_descri");
                                                 foreach ($sucursales as $sucursal) {
