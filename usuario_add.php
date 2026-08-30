@@ -74,6 +74,21 @@
                                             <input type="password" name="vusr_pass" class="form-control" required autofocus="">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="accion" value="1">
+                                        <label class="col-lg-2 control-label">Sucursal</label>
+                                        <div class="col-lg-5">
+                                            <select name="vusr_sucursal" class="form-control" required>
+                                                <option value="">Seleccione una sucursal</option>
+                                                <?php
+                                                $sucursales = consultas::get_datos("SELECT id_sucursal, suc_descri FROM sucursal ORDER BY suc_descri");
+                                                foreach ($sucursales as $sucursal) {
+                                                    echo "<option value='".$sucursal['id_sucursal']."'>".$sucursal['suc_descri']."</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-primary pull-right">Registrar</button>
