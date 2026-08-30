@@ -42,7 +42,7 @@ if ($_SESSION){
         <div class="container wll" id="sha">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <img src="img/user.png" class="img-responsive" id="user">
+                    <img src="img/user.png" class="img-responsive center-block" id="user">
                 </div>
             </div>
         </div>
