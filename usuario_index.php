@@ -39,13 +39,12 @@
                                 <div class="row">
                                     <div class="col-md-12 col-xs-12 col-lg-12">
                                         <?php
-                                        $usuario = consultas::get_datos("select u.usu_cod, u.usu_nick, s.suc_descri from usuario u join sucursal s on u.id_sucursal = s.id_sucursal");
+                                        $usuario = consultas::get_datos("select u.usu_cod, u.usu_nick, e.emp_nombre, e.emp_apellido, g.gru_nombre, s.suc_descri from usuarios u join empleado e on u.emp_cod = e.emp_cod join grupos g on u.gru_cod = g.gru_cod join sucursal s on u.id_sucursal = s.id_sucursal");
                                         if (!empty($usuario)) { ?>
                                         <div class="table-responsive">
                                             <table class="table col-lg-12 col-md-12 col-xs-12 table-bordered table-striped table-condensed">
                                                 <thead>
                                                     <tr>
-                                                        <th></th>
                                                         <th>Usuario</th>
                                                         <th>Nombre</th>
                                                         <th>Apellido</th>
@@ -58,9 +57,9 @@
                                                     <?php foreach ($usuario as $usr) { ?>
                                                     <tr>
                                                         <td data-title="Usuario"><?php echo $usr['usu_nick'];?></td>
-                                                        <td data-title="Nombre"><?php echo $usr['usu_nom'];?></td>
-                                                        <td data-title="Apellido"><?php echo $usr['usu_ape'];?></td>
-                                                        <td data-title="Grupo de usuarios"><?php echo $usr['usu_grupo'];?></td>
+                                                        <td data-title="Nombre"><?php echo $usr['emp_nombre'];?></td>
+                                                        <td data-title="Apellido"><?php echo $usr['emp_apellido'];?></td>
+                                                        <td data-title="Grupo de usuarios"><?php echo $usr['gru_nombre'];?></td>
                                                         <td data-title="Sucursal"><?php echo $usr['suc_descri'];?></td>
                                                         <td data-title="Acciones" class="text-center">
                                                             <a href="usuario_edit.php?vusr_cod=<?php echo $usr['usu_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
