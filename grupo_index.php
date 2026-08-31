@@ -45,7 +45,7 @@
                                             <table class="table col-lg-12 col-md-12 col-xs-12 table-bordered table-striped table-condensed">
                                                 <thead>
                                                     <tr>
-                                                        <th>Grupo</th>
+                                                        <th>Nombre</th>
                                                         <th class="text-center">Acciones</th>
                                                     </tr>
                                                 </thead>

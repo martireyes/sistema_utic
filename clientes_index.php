@@ -45,7 +45,9 @@
                                             <table class="table col-lg-12 col-md-12 col-xs-12 table-bordered table-striped table-condensed">
                                                 <thead>
                                                     <tr>
-                                                        <th>Clientes</th>
+                                                        <th>Cédula</th>
+                                                        <th>Nombre</th>
+                                                        <th>Apellido</th>
                                                         <th class="text-center">Acciones</th>
                                                     </tr>
                                                 </thead>
