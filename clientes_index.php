@@ -48,6 +48,8 @@
                                                         <th>Cédula</th>
                                                         <th>Nombre</th>
                                                         <th>Apellido</th>
+                                                        <th>Teléfono</th>
+                                                        <th>Dirección</th>
                                                         <th class="text-center">Acciones</th>
                                                     </tr>
                                                 </thead>
@@ -57,6 +59,8 @@
                                                         <td data-title="Cédula"><?php echo $cli['cli_ci'];?></td>
                                                         <td data-title="Nombre"><?php echo $cli['cli_nombre'];?></td>
                                                         <td data-title="Apellido"><?php echo $cli['cli_apellido'];?></td>
+                                                        <td data-title="Teléfono"><?php echo $cli['cli_telefono'];?></td>
+                                                        <td data-title="Dirección"><?php echo $cli['cli_direcc'];?></td>
                                                         <td data-title="Acciones" class="text-center">
                                                             <a href="clientes_edit.php?vcli_cod=<?php echo $cli['cli_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-edit"></span>
