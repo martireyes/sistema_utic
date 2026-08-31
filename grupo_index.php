@@ -54,10 +54,10 @@
                                                     <tr>
                                                         <td data-title="Nombre"><?php echo $grupo['gru_nombre'];?></td>
                                                         <td data-title="Acciones" class="text-center">
-                                                            <a href="grupo_edit.php?vgrupo_cod=<?php echo $grupo['gru_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
+                                                            <a href="grupo_edit.php?vgru_cod=<?php echo $grupo['gru_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-edit"></span>
                                                             </a>
-                                                            <a href="grupo_del.php?vgrupo_cod=<?php echo $grupo['gru_cod'];?>" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
+                                                            <a href="grupo_del.php?vgru_cod=<?php echo $grupo['gru_cod'];?>" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                             </a>
                                                         </td>
