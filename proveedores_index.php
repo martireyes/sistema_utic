@@ -60,10 +60,10 @@
                                                         <td data-title="Dirección"><?php echo $prov['prv_direccion'];?></td>
                                                         <td data-title="Teléfono"><?php echo $prov['prv_telefono'];?></td>
                                                         <td data-title="Acciones" class="text-center">
-                                                            <a href="proveedores_edit.php?vprov_cod=<?php echo $prov['prv_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
+                                                            <a href="proveedores_edit.php?vprv_cod=<?php echo $prov['prv_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-edit"></span>
                                                             </a>
-                                                            <a href="proveedores_del.php?vprov_cod=<?php echo $prov['prv_cod'];?>" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
+                                                            <a href="proveedores_del.php?vprv_cod=<?php echo $prov['prv_cod'];?>" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
                                                                 <span class="glyphicon glyphicon-trash"></span>
                                                             </a>
                                                         </td>
