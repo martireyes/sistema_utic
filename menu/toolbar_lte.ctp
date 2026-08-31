@@ -38,6 +38,6 @@
         </ul>
     </li>
     <?php } ?>
-</ul>
+        </ul>
 </section>
 </aside>
