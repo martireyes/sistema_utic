@@ -18,10 +18,10 @@
                         </p>
                     </li>
                     <li class="user-footer">
-                        <div class="pull-left">
+                        <div class="float-start">
                             <a href="perfil.php" class="btn btn-default">Perfil</a>
                         </div>
-                        <div class="pull-right">
+                        <div class="float-end">
                             <a href="index.php" class="btn btn-default">Salir</a>
                         </div>
                     </li>
