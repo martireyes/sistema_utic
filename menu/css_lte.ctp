@@ -3,11 +3,11 @@
 <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/fontawesome.min.css">
 <!-- <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="ionicons-2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-<link rel="stylesheet" href="plugins/select2/select2.min.css">
+<!-- <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css"> -->
+<!-- <link rel="stylesheet" href="plugins/select2/select2.min.css"> -->
 <link rel="stylesheet" href="assets/adminlte.min.css">
 <!-- <link rel="stylesheet" href="css/AdminLTE.min.css"> -->
-<link rel="stylesheet" href="plugins/iCheck/square/blue.css">
+<!-- <link rel="stylesheet" href="plugins/iCheck/square/blue.css"> -->
 <!-- <link rel="stylesheet" href="css/skins/skin-blue.min.css"> -->
 
 <style>

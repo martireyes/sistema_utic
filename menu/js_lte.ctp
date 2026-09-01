@@ -1,25 +1,11 @@
-<!-- jQuery 2.1.4 -->
-<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-<!-- Bootstrap 3.3.5 -->
+<script src="plugins/jQuery/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
-
-<!-- Select2 -->
 <script src="plugins/select2/select2.full.min.js"></script>
-
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.min.js"></script>
-
-<!-- AdminLTE App -->
+<!-- <script src="plugins/fastclick/fastclick.min.js"></script> -->
 <script src="js/adminlte/js/app.min.js"></script>
-
-<!-- SlimScroll 1.3.0 -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-
-<script src="plugins/iCheck/icheck.min.js"></script>
-
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!--<script src="/sicoe/js/adminlte/js/pages/dashboard2.js"></script>-->
-<!-- AdminLTE for demo purposes -->
+<!-- <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script> -->
+<!-- <script src="plugins/iCheck/icheck.min.js"></script> -->
 
 <script>
 //Initialize Select2 Elements
