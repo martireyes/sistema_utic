@@ -121,9 +121,3 @@ document.querySelectorAll('[data-bs-toggle="popover"]');
         return (parts.length === 3 ? '-' : '') + result;
     }
 </script>
-
-
-
-
-
-
