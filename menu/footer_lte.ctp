@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="app-footer">
     <div class="pull-right hidden-xs">
         <b>Sucursal:</b> <?php echo $_SESSION['sucursal'];?>
     </div>
