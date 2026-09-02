@@ -8,51 +8,12 @@ if ($_SESSION){
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <script>
-        (() => {'use strict';const root = document.documentElement;
-        if (root.getAttribute('data-lte-color-mode') === 'off') {
-          return;
-        }
-        const STORAGE_KEY = 'lte-theme';
-        let stored = null;
-        try {
-          stored = localStorage.getItem(STORAGE_KEY);
-        } catch {
-        }
-        const authored = root.getAttribute('data-bs-theme');
-        let resolved = 'light';
-        if (stored === 'dark' || stored === 'light') {
-          resolved = stored;
-        } else if (authored === 'dark' || authored === 'light') {
-          resolved = authored;
-        } else if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
-          resolved = 'dark';
-        }
-        root.setAttribute('data-bs-theme', resolved);
-        root.style.colorScheme = resolved;
-        if (resolved !== authored) {
-          root.setAttribute('data-lte-theme-resolved', '');
-        }
-        })();
-        </script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>LP3 | Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
-        <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+        <meta charset="UTF-8">
+        <title>LP3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
-        <meta name="title" content="LP3 | Login" />
-        <meta name="author" content="ColorlibHQ" />
-        <meta name="supported-color-schemes" content="light dark" />
-        <link rel="preload" href="../css/adminlte.css" as="style" />
-
-        <link rel="stylesheet" href="css/source-sans-3.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin="anonymous" />
-        <link rel="stylesheet" href="css/adminlte.css" />
-
-        <!-- <style>
+        <style>
         body {
             padding-top: 40px;
             padding-bottom: 40px;
@@ -75,7 +36,7 @@ if ($_SESSION){
             border-radius: 50%;
             object-fit: cover; /* Evita la distorsión de la imagen si no es 1:1 */
             }
-            </style> --> 
+            </style>
     </head>
     <body>
         <div class="container wll" id="sha">

@@ -1,14 +1,12 @@
 <?php 
 require './clases/conexion.php';
 $sql="select * from v_usuarios where usu_nick= '".$_REQUEST['usuario']."' and usu_clave = md5('".$_REQUEST['clave']."')";
-
 $resultado=consultas::get_datos($sql);
-
 session_start();
 
 if ($resultado[0]['usu_cod']==null){
     $_SESSION['error']='Usuario o contraseña incorrectos';
-    header('location:index.php');
+    header('location:login/index.php');
 }else{
     $_SESSION['usu_cod']=$resultado[0]['usu_cod'];
     $_SESSION['usu_nick']=$resultado[0]['usu_nick'];
