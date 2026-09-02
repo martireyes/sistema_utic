@@ -27,7 +27,7 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-list"></i>
-                    <p><?php echo $modulo['mod_nombre']?></p><i class="nav-arrow fas fa-angle-right"></i>
+                    <p><?php echo $modulo['mod_nombre']?><i class="nav-arrow fas fa-angle-right"></i></p>
                 </a>
                 <?php
                 $paginas=consultas::get_datos("select * from paginas a join modulos b on a.mod_cod=b.mod_cod where mod_nombre='".$modulo['mod_nombre']."' order by pag_nombre");
@@ -40,5 +40,5 @@
             </li>
                 <?php } ?>
         </ul>
-</div>
+    </div>
 </aside>

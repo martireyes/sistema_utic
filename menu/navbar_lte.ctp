@@ -1,15 +1,15 @@
-<nav class="navbar navbar-static-top" role="navigation">
-    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+<nav class="ms-auto d-flex align-items-center">
+    <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"><i class="bi bi-list"></i></a>
+        <!-- <span class="sr-only">Toggle navigation</span> -->
     </a>
-    <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-            <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="user-image" alt="User Image">
-                    <span class="hidden-xs"><?php echo $_SESSION['usu_nick'];?></span>
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown user-menu">
+            
+        <a href="#" class="dropdown-toggle" class="user-image rounded-circle" alt="User Image" width="30"height="30">
+            <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="user-image" alt="User Image">
+                    <span class="d-none d-sm-inline"><?php echo $_SESSION['usu_nick'];?></span>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown">
                     <li class="user-header">
                         <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="img-circle" alt="User Image">
                         <p>
@@ -28,5 +28,4 @@
                 </ul>
             </li>
         </ul>
-    </div>
 </nav>
