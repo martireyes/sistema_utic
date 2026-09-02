@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/fontawesome.min.css">
+<link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.min.css">
 <!-- <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="ionicons-2.0.1/css/ionicons.min.css">
 <!-- <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css"> -->

@@ -15,7 +15,6 @@
             <?php require 'menu/header_lte.ctp'; ?>
             <?php require 'menu/toolbar_lte.ctp';?>
             <main class="app-main">
-
             </main>
             <?php require 'menu/footer_lte.ctp'; ?>  
         </div>                  
