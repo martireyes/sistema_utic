@@ -50,26 +50,26 @@ if ($_SESSION){
         <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="css/adminlte.css" />
     </head>
-    <body class="login-page bg-body-secondary">
-        <main class="login-box">    
+    <body class="login-page bg-body-secondary app-loaded">
+        <div class="login-box">    
         <h1 class="login-logo">
             <a href="#"><b>Compra | Venta</b></a>
         </h1>
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Iniciar sesión con su usuario</p>
+                <p class="login-box-msg">Iniciar sesión</p>
 
                 <form action="acceso.php" method="post">
                      <label class="visually-hidden" for="loginEmail">Usuario</label>
                      <div class="input-group mb-3">
-                        <input id="usuario" type="text" class="form-control" placeholder="Usuario" />
+                        <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario" />
                         <div class="input-group-text">
                             <span class="bi bi-envelope"></span>
                         </div>
                     </div>
                     <label class="visually-hidden" for="loginPassword">Password</label>
                     <div class="input-group mb-3">
-                        <input id="clave" type="password" class="form-control" placeholder="Password" />
+                        <input id="clave" name="clave" type="password" class="form-control" placeholder="Password" />
                         <div class="input-group-text">
                             <span class="bi bi-lock-fill"></span>
                         </div>
@@ -101,18 +101,18 @@ if ($_SESSION){
             //Mensaje de error
             if(!empty($_SESSION['error'])){?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <span class="bi bi-exclamation-triangle-fill me-2"></sapn>
+                <span class="bi bi-exclamation-triangle-fill me-2"></span>
                 <?php echo $_SESSION['error']; ?>
             </div>
             <?php } ?>
         </form>
             </div>
         </div>
-        </main>
+        </div>
         <script src="js/overlayscrollbars.browser.es6.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/adminlte.js"></script>
+        <script src="js/adminlte/adminlte.js"></script>
        <!-- <script src="js/jquery-1.12.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script> -->
         <script>
