@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>LP3</title>
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta content="width=device-width, initial-scale=1, user-scalable=yes" name="viewport">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
         <?php
