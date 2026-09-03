@@ -1,14 +1,29 @@
-<link rel="stylesheet" href="assets/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.min.css">
-<!-- <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"> -->
+
+<!-- Bootstrap 3.3.5 -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+<!-- Ionicons -->
 <link rel="stylesheet" href="ionicons-2.0.1/css/ionicons.min.css">
-<!-- <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css"> -->
-<!-- <link rel="stylesheet" href="plugins/select2/select2.min.css"> -->
-<link rel="stylesheet" href="assets/adminlte.min.css">
-<!-- <link rel="stylesheet" href="css/AdminLTE.min.css"> -->
-<!-- <link rel="stylesheet" href="plugins/iCheck/square/blue.css"> -->
-<!-- <link rel="stylesheet" href="css/skins/skin-blue.min.css"> -->
+<!-- jvectormap -->
+<link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+
+<link rel="stylesheet" href="plugins/select2/select2.min.css">
+
+<!-- Theme style -->
+<link rel="stylesheet" href="css/AdminLTE.min.css">
+
+<link rel="stylesheet" href="plugins/iCheck/square/blue.css">
+
+
+<link rel="stylesheet" href="css/skins/skin-blue.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 <style>
     @media (min-width: 768px){

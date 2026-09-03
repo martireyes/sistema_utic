@@ -1,6 +1,7 @@
-<header class="app-header navbar navbar-expand bg-body">
-    <a href="menu.php" class="navbar-brand px-3 fw-bold">
-        Compra | Venta
+<header class="main-header">
+    <a href="menu.php" class="logo">
+        <span class="logo-mini"><b>C | V</b></span>
+        <span class="logo-lg">Compra | Venta</span>
     </a>
     <?php require 'menu/navbar_lte.ctp'; ?>
 </header>

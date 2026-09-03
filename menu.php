@@ -10,11 +10,11 @@
         session_start();
         require 'menu/css_lte.ctp'; ?>
     </head>
-    <body class="sidebar-expand-lg layout-fixed">
-        <div class="app-wrapper">
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
             <?php require 'menu/header_lte.ctp'; ?>
             <?php require 'menu/toolbar_lte.ctp';?>
-            <main class="app-main">
+            <main class="content-wrapper">
             </main>
             <?php require 'menu/footer_lte.ctp'; ?>  
         </div>                  

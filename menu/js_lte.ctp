@@ -1,20 +1,32 @@
-<script src="plugins/jQuery/jquery-3.7.1.min.js"></script>
-<!-- <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script> -->
-<script src="js/bootstrap.bundle.js"></script>
-<!-- <script src="js/bootstrap.min.js"></script> -->
+<!-- jQuery 2.1.4 -->
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Select2 -->
 <script src="plugins/select2/select2.full.min.js"></script>
-<!-- <script src="plugins/fastclick/fastclick.min.js"></script> -->
-<script src="js/adminlte.min.js"></script>
-<!-- <script src="js/adminlte/js/app.min.js"></script> -->
-<!-- <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script> -->
-<!-- <script src="plugins/iCheck/icheck.min.js"></script> -->
+
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="js/adminlte/js/app.min.js"></script>
+
+<!-- SlimScroll 1.3.0 -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
+<script src="plugins/iCheck/icheck.min.js"></script>
+
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--<script src="/sicoe/js/adminlte/js/pages/dashboard2.js"></script>-->
+<!-- AdminLTE for demo purposes -->
 
 <script>
 //Initialize Select2 Elements
     $(".select2").select2();
 </script>
 
-<!-- <script>
+<script>
     $(function() {
         $('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -22,37 +34,19 @@
             increaseArea: '20%' // optional
         });
     });
-</script> -->
+</script>
 
-<!-- <script>
+<script>
     $(function() {
         $("[rel='tooltip']").tooltip();
     });
-</script> -->
-
-<script> const tooltipTriggerList =
-document.querySelectorAll('[data-bs-toggle="tooltip"]');
-[...tooltipTriggerList].map(
-    tooltipTriggerEl =>
-    new bootstrap.Tooltip(tooltipTriggerEl)
-);
 </script>
 
-<!-- <script>
+<script>
     $(function() {
         $("[data-toggle='popover']").popover();
     });
-</script> -->
-
-<script>
-    const popoverTriggerList =
-document.querySelectorAll('[data-bs-toggle="popover"]');
-[...popoverTriggerList].map(
-    popoverTriggerEl =>
-    new bootstrap.Popover(popoverTriggerEl)
-);
 </script>
-
 
 <script type='text/javascript'>
     // Botón para ir al tope de la pagina
@@ -121,3 +115,9 @@ document.querySelectorAll('[data-bs-toggle="popover"]');
         return (parts.length === 3 ? '-' : '') + result;
     }
 </script>
+
+
+
+
+
+
