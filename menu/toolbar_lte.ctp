@@ -1,7 +1,7 @@
 <?php require ("clases/conexion.php"); ?>
 <aside class="main-sidebar">
     <section class="sidebar">
-        <div class="user-panel">
+       <div class="user-panel">
             <div class="pull-left image">
                 <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="img-circle" alt="User Image">
             </div>
@@ -34,7 +34,7 @@
                 ?>
                 <ul class="treeview-menu">
                 <?php  foreach ($paginas as $pagina) { ?>
-                <li><a href="<?php echo $pagina['pag_direc']?>"><i class="fa fa-circle-o"></i><p><?php echo $pagina['pag_nombre']?></p></a></li>
+                <li><a href="<?php echo $pagina['pag_direc']?>"><i class="fa fa-circle-o"></i><?php echo $pagina['pag_nombre']?></a></li>
                 <?php };?>
                 </ul>
             </li>
