@@ -44,34 +44,50 @@ if ($_SESSION){
         <meta name="title" content="LP3 | Login" />
         <meta name="author" content="ColorlibHQ" />
         <meta name="supported-color-schemes" content="light dark" />
-        <link rel="preload" href="css/adminlte.css" as="style" />
-        <link rel="stylesheet" href="css/source-sans-3.css" />
-        <link rel="stylesheet" href="css/overlayscrollbars.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+      integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
+      crossorigin="anonymous"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      crossorigin="anonymous"
+    />
         <link rel="stylesheet" href="css/adminlte.css" />
     </head>
     <body class="login-page bg-body-secondary app-loaded">
         <div class="login-box">    
-        <h1 class="login-logo">
-            <a href="#"><b>Compra | Venta</b></a>
-        </h1>
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Iniciar sesión</p>
+            <h1 class="login-logo">
+                <a href="#"><b>Compra | Venta</b></a>
+            </h1>
+            <div class="card">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">Iniciar sesión</p>
 
-                <form action="acceso.php" method="post">
-                     <label class="visually-hidden" for="loginEmail">Usuario</label>
-                     <div class="input-group mb-3">
-                        <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario" />
-                        <div class="input-group-text">
-                            <span class="bi bi-envelope"></span>
+                    <form action="acceso.php" method="post">
+                        <label class="visually-hidden" for="loginEmail">Usuario</label>
+                        <div class="input-group mb-3">
+                            <input id="usuario" name="usuario" type="text" class="form-control" placeholder="Usuario" />
+                            <div class="input-group-text">
+                                <span class="bi bi-envelope"></span>
+                            </div>
                         </div>
                     </div>
-                    <label class="visually-hidden" for="loginPassword">Password</label>
-                    <div class="input-group mb-3">
-                        <input id="clave" name="clave" type="password" class="form-control" placeholder="Password" />
-                        <div class="input-group-text">
-                            <span class="bi bi-lock-fill"></span>
+                        <label class="visually-hidden" for="loginPassword">Password</label>
+                        <div class="input-group mb-3">
+                            <input id="clave" name="clave" type="password" class="form-control" placeholder="Password" />
+                            <div class="input-group-text">
+                                    <span class="bi bi-lock-fill"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -87,16 +103,6 @@ if ($_SESSION){
                             </div>
                         </div>
                     </div>
-
-
-
-
-           <!--  
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
-            <div class="checkbox">
-                <label class="checkbox"><input type="checkbox" value="1" name="recuerdame"/>No cerrar sesión</label>
-                <p class="help-block"><a href="#">¿No puede acceder a su cuenta?</a></p>
-            </div> -->
             <?php
             //Mensaje de error
             if(!empty($_SESSION['error'])){?>
@@ -109,9 +115,20 @@ if ($_SESSION){
             </div>
         </div>
         </div>
-        <script src="js/overlayscrollbars.browser.es6.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script
+      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
         <script src="js/adminlte/adminlte.js"></script>
        <!-- <script src="js/jquery-1.12.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script> -->

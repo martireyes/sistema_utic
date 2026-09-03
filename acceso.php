@@ -6,7 +6,7 @@ session_start();
 
 if ($resultado[0]['usu_cod']==null){
     $_SESSION['error']='Usuario o contraseña incorrectos';
-    header('location:login/index.php');
+    header('location:index.php');
 }else{
     $_SESSION['usu_cod']=$resultado[0]['usu_cod'];
     $_SESSION['usu_nick']=$resultado[0]['usu_nick'];
