@@ -1,5 +1,5 @@
 <?php
-include './tcpdf/tcpdf.php';
+include 'tcpdf/tcpdf.php';
 include 'clases/conexion.php';
 class MYPDF extends TCPDF {
     function Footer() {
@@ -34,21 +34,19 @@ $pdf->SetDrawColor(0,0,0);
 $pdf->SetLineWidth(0.2);
 $pdf->SetFont('','B',12);
 $pdf->SetFillColor(180,180,180);
-$pdf->Cell(10,5,'ID',1,0,'C',1);
-$pdf->Cell(40,5,'Nombres',1,0,'C',1);
-$pdf->Cell(40,5,'Apellidos',1,0,'C',1);
-$pdf->Cell(40,5,'Alias',1,0,'C',1);
-$pdf->Cell(50,5,'Correo',1,0,'C',1);
+$pdf->Cell(10,5,'Código',1,0,'C',1);
+$pdf->Cell(40,5,'Nick',1,0,'C',1);
+$pdf->Cell(40,5,'Empleado',1,0,'C',1);
+$pdf->Cell(40,5,'Grupo',1,0,'C',1);
 $pdf->Ln();
 $pdf->SetFont('','');
 $pdf->SetFillColor(255,255,255);
-$usuario = consultas::get_datos("select * from usuarios order by id_usuario");
+$usuario = consultas::get_datos("select * from usuarios order by usu_cod");
 foreach ($usuario as $usu):;
-$pdf->Cell(10,5,$usu['id_usuario'],1,0,'C',1);
-$pdf->Cell(40,5,$usu['nombre'],1,0,'C',1);
-$pdf->Cell(40,5,$usu['apellido'],1,0,'C',1);
-$pdf->Cell(40,5,$usu['alias'],1,0,'C',1);
-$pdf->Cell(50,5,$usu['email'],1,0,'C',1);
+$pdf->Cell(10,5,$usu['usu_cod'],1,0,'C',1);
+$pdf->Cell(40,5,$usu['usu_nick'],1,0,'C',1);
+$pdf->Cell(40,5,$usu['emp_cod'],1,0,'C',1);
+$pdf->Cell(50,5,$usu['gru_cod'],1,0,'C',1);
         $pdf->Ln();
         endforeach;
         $pdf->Output('reporte_usuarios.pdf','I');
