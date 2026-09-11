@@ -8,48 +8,19 @@ if ($_SESSION){
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>LP3</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <title>LP3 | Acceso</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@4.9.1/dist/css/adminlte.min.css" />
         <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
-        <style>
-            body{
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
-            body,html{
-                background: url(img/fondo.jpg) no-repeat center center fixed;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                
-            }
-            .login{
-                max-width: 330px;
-                padding: 15px;
-                margin: 0 auto;
-                
-            }
-            #sha{
-                max-width: 340px;
-                -webkit-box-shadow: 0px 0px 18px 0px rgba(48,50,50,0.48);
-                -moz-box-shadow:0px 0px 18px 0px rgba(48,50,50,0.48);
-                box-shadow: 0px 0px 18px 0px rgba(48,50,50,0.48);
-                border-radius: 6%;
-                
-            }
-            #avatar{
-                width: 96px;
-                height: 96px;
-                margin: 0px auto 10px;
-                display: block;
-                border-radius: 50%;
-            }
-        </style>
     </head>
     <body>
-        <div class="container wll" id="sha">
+        <div class="login-page bg-body-secondary">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <img src="img/user.png" class="img-responsive" id="user"/>
@@ -84,7 +55,10 @@ if ($_SESSION){
                 <?php } ?>
             </form>
         </div>
-        <script src="js/jquery-1.12.2.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.9.1/dist/js/adminlte.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
