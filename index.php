@@ -30,8 +30,8 @@ if ($_SESSION){
                     <div class="card-body login-card-body">
                         <p class="login-box-msg">Ingrese sus credenciales para iniciar sesión</p>
 
-                        <form action="acceso.php" method="post">
-                            <label for="validationTooltipUsername" class="visually-hidden" for="loginUser">Usuario</label>
+                        <form class="needs-validation-tooltip" action="acceso.php" method="post">
+                            <label class="visually-hidden" for="loginUser">Usuario</label>
                             <div class="input-group mb-3">
                                 <input id="loginUser" type="text" class="form-control" name="usuario" placeholder="Usuario" required>
                                 <div class="input-group-text">
@@ -40,7 +40,7 @@ if ($_SESSION){
                             </div>
                             <label class="visually-hidden" for="loginClave">Clave</label>
                             <div class="input-group mb-3">
-                                <input id="loginClave" type="password" class="form-control" name="clave" placeholder="Clave"/>
+                                <input id="loginClave" type="password" class="form-control" name="clave" placeholder="Clave" required/>
                                 <div class="input-group-text">
                                     <span class="bi bi-lock-fill"></span>
                                 </div>
@@ -58,18 +58,32 @@ if ($_SESSION){
                                     </div>
                                 </div>
                             </div>
-                           <!-- <?php //Mensaje de error
-                            if(!empty($_SESSION['error'])){?>
-                            <div class="alert alert-danger" role="alert">
-                                <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                <?php echo $_SESSION['error']; ?>
+                            <?php
+                            if (!empty($_SESSION['error'])) {
+                                ?>
                                 <div class="alert alert-danger" role="alert">
-                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                    Error de inicio
+                                    <strong>Error de inicio:</strong>
+                                    <?php echo $_SESSION['error']; ?>
                                 </div>
-                            </div>
-                            <?php } ?> -->
+                                <?php
+                                }
+                                ?>
                         </form>
+                        <div class="social-auth-links text-center mb-3 d-grid gap-2">
+                            <p>- O -</p>
+                            <a href="#" class="btn btn-primary">
+                                <i class="bi bi-facebook me-2"></i> Iniciar con Facebook
+                            </a>
+                            <a href="#" class="btn btn-danger">
+                                <i class="bi bi-google me-2"></i> Iniciar con Google
+                            </a>
+                        </div>
+                        <p class="mb-1">
+                            <a href="forgot-password.html">Olvidé mi clave</a>
+                        </p>
+                        <p class="mb-0">
+                            <a href="register.html" class="text-center"> Registrarse </a>
+                        </p>
                     </div>
                 </div>
             </main>
