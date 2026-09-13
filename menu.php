@@ -2,16 +2,22 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>LP3</title>
-        <meta content="width=device-width, initial-scale=1, user-scalable=yes" name="viewport">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LP3 | Dashboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+        <meta name="title" content="AdminLTE v4 | Dashboard" />
+        <meta name="author" content="ColorlibHQ" />
+        <meta name="supported-color-schemes" content="light dark" />
         <link rel="shortcut icon" type="image/x-icon" href="img/venta.png">
         <?php
         session_start();
-        require 'menu/css_lte.ctp'; ?>
+         require 'menu/css_lte.ctp'; ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
+    <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+        <div class="app-wrapper">
             <?php require 'menu/header_lte.ctp'; ?>
             <?php require 'menu/toolbar_lte.ctp';?>
             <main class="content-wrapper">
