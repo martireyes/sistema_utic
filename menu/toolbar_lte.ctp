@@ -47,17 +47,17 @@
                     $paginas=consultas::get_datos("select * from paginas a join modulos b on a.mod_cod=b.mod_cod where mod_nombre='".$modulo['mod_nombre']."' order by pag_nombre");
                     ?>
                     <ul class="nav nav-treeview">
-                        <?php  foreach ($paginas as $pagina) { ?>
+                         <?php foreach ($paginas as $pagina) { ?>
                         <li class="nav-item">
-                            <a href="<?php echo $pagina['pag_direc']?>" class="nav-link active">
+                            <a href="<?php echo $pagina['pag_direc']?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
-                                <?php echo $pagina['pag_nombre']?>
+                                <p> <?php echo $pagina['pag_nombre']?></p>
                             </a>
                         </li>
                         <?php };?>
                     </ul>
                 </li>
-                    <?php } ?>
+                <?php } ?>
             </ul>
             <!--Fin::Menú lateral-->
         </nav>
