@@ -7,13 +7,13 @@
                 </a>
             </li>
             <li class="nav-item d-none d-md-block">
-                <a href="./index.html" class="nav-link">
+                <a href="menu.php" class="nav-link">
                     <i class="bi bi-grid-1x2 me-1" aria-hidden="true"></i>
                     Menú Principal
                 </a>
             </li>
             <li class="nav-item d-none d-md-block">
-                <a href="./docs/introduction.html" class="nav-link">
+                <a href="introduction.html" class="nav-link">
                     <i class="bi bi-book me-1" aria-hidden="true"></i>
                     Documentación
                 </a>
