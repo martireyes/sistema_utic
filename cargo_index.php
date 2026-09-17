@@ -17,24 +17,43 @@
         <div class="app-content-header">
             <div class="conteiner-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-xs-12">
-                        <?php if (!empty($_SESSION['mensaje'])) { ?>
-                        <div class="alert alert-danger" role="alert" id="mensaje">
-                            <span class="glyphicon glyphicon-exclamation-sign"></span>
-                            <?php echo $_SESSION['mensaje'];
-                            $_SESSION['mensaje'] = ''; ?>
-                            </div>
-                            <?php } ?>
-                            <div class="box box-primary">
-                            <div class="box-header">
-                                <i class="ion ion-clipboard"></i>
-                                <h3 class="box-title">Cargos</h3>
-                                <div class="box-tools">
-                                    <a href="cargo_add.php" class="btn btn-primary pull-right btn-sm">
+                    <div class="col-sm-6">
+                        <h1 class="mb-0 fs-3">Tabla de Cargos</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tabla de Cargos </li>
+                            </ol>
+                        </nav>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="app-content">
+            <div class="conteiner-fluid">
+                <div class="card">
+                    <?php if (!empty($_SESSION['mensaje'])) { ?>
+                    <div class="alert alert-danger" role="alert" id="mensaje">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        <?php echo $_SESSION['mensaje'];
+                        $_SESSION['mensaje'] = ''; ?>
+                    </div>
+                    <?php } ?>
+                    <div class="card-header">
+                        <h3 class="card-title">Cargos</h3>
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 16rem">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                </span>
+                                <a href="cargo_add.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
+                                </a>
                             </div>
+                        </div>
+                    </div>
                             <div class="box-body no-padding">
                                 <div class="row">
                                     <div class="col-md-12 col-xs-12 col-lg-12">
@@ -75,8 +94,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
