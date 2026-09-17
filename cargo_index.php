@@ -15,7 +15,7 @@
         <?php require 'menu/header_lte.ctp'; ?>
         <?php require 'menu/toolbar_lte.ctp';?>
         <div class="app-content-header">
-            <div class="conteiner-fluid">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
                         <h1 class="mb-0 fs-3">Tabla de Cargos</h1>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="app-content">
-            <div class="conteiner-fluid">
+            <div class="container-fluid">
                 <div class="card">
                     <?php if (!empty($_SESSION['mensaje'])) { ?>
                     <div class="alert alert-danger" role="alert" id="mensaje">
