@@ -28,7 +28,7 @@
             <!--Inicio::Menú lateral-->
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="false" id="navigation" >
                 <li class="nav-item">
-                    <a href="./starter.html" class="nav-link">
+                    <a href="menu.php" class="nav-link">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>Dashboard</p>
                     </a>
