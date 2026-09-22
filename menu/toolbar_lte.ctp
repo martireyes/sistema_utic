@@ -49,7 +49,8 @@
                     <ul class="nav nav-treeview">
                          <?php foreach ($paginas as $pagina) { ?>
                         <li class="nav-item">
-                            <a href="<?php echo $pagina['pag_direc']?>" class="nav-link">
+                            <!-- <a href="<?php echo $pagina['pag_direc']?>" class="nav-link"> -->
+                            <a href="menu.php?ruta=<?php echo $pagina['pag_direc']; ?>" class="nav-link">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p> <?php echo $pagina['pag_nombre']?></p>
                             </a>
