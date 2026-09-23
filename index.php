@@ -70,10 +70,10 @@ if ($_SESSION){
                                 ?>
                         </form>
                         <p class="mb-1">
-                            <a href="forgot-password.html">Olvidé mi clave</a>
+                            <a href="clave_olvidada.php">Olvidé mi clave</a>
                         </p>
                         <p class="mb-0">
-                            <a href="register.html" class="text-center"> Registrarse </a>
+                            <a href="register.html" class="text-center"> Registrar nuevo usuario</a>
                         </p>
                     </div>
                 </div>

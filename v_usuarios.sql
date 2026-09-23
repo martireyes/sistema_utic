@@ -2,7 +2,9 @@ CREATE OR REPLACE VIEW v_usuarios AS
 SELECT 
     a.usu_cod,
     a.usu_nick,
-    a.usu_clave, 
+    a.usu_clave,
+    a.usu_estado,
+    a.usu_email,
     a.emp_cod,
     b.car_cod,
     c.car_descri,
