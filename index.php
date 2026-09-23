@@ -69,15 +69,6 @@ if ($_SESSION){
                                 }
                                 ?>
                         </form>
-                        <div class="social-auth-links text-center mb-3 d-grid gap-2">
-                            <p>- O -</p>
-                            <a href="#" class="btn btn-primary">
-                                <i class="bi bi-facebook me-2"></i> Iniciar con Facebook
-                            </a>
-                            <a href="#" class="btn btn-danger">
-                                <i class="bi bi-google me-2"></i> Iniciar con Google
-                            </a>
-                        </div>
                         <p class="mb-1">
                             <a href="forgot-password.html">Olvidé mi clave</a>
                         </p>
