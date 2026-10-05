@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $token = bin2hex(random_bytes(32));
 
         // 3. Definir fecha de expiración (1 hora desde el momento actual)
-        $expira = date("d-m-Y H:i:s", strtotime("+1 hour"));
+        $expira = date("Y-m-d H:i:s", strtotime("+1 hour"));
 
         // 4. Guardar token en la base de datos
         $sqlToken = "INSERT INTO tokens (usu_cod, token, tok_expira) VALUES ($1, $2, $3)";
@@ -73,9 +73,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: recuperar.php?status=success");
             exit();
 
-        } catch (Exception $e) {
-            header("Location: recuperar.php?status=mail_error");
-            exit();
+        } //catch (Exception $e) {
+            //header("Location: recuperar.php?status=mail_error");
+            //exit();
+            catch (Exception $e) {
+                // Imprime el error real en pantalla para diagnosticar
+                echo "Error al enviar el correo: " . $mail->ErrorInfo;
+                exit();
         }
 
     } else {
