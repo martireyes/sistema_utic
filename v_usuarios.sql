@@ -5,6 +5,7 @@ SELECT
     a.usu_clave,
     a.usu_estado,
     a.usu_email,
+    a.usu_foto,
     a.emp_cod,
     b.car_cod,
     c.car_descri,
