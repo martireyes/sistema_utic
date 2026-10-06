@@ -12,7 +12,7 @@ require 'vendor/PHPMailer/PHPMailer/src/SMTP.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST['email'])) {
-        header("Location: recuperar.php?status=empty");
+        header("Location: clave_olvidada.php?status=empty");
         exit();
     }
 
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host       = 'smtp.gmail.com';  // Servidor SMTP (ejemplo: Gmail)
             $mail->SMTPAuth   = true;
             $mail->Username   = 'rreyes1700ii@gmail.com'; // Tu cuenta de correo
-            $mail->Password   = 'Amelie@2026'; // Contraseña de aplicación
+            $mail->Password   = 'mebc jhhs bcti uhju'; // Contraseña de aplicación
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ";
 
             $mail->send();
-            header("Location: recuperar.php?status=success");
+            header("Location: clave_olvidada.php?status=success");
             exit();
 
         } //catch (Exception $e) {
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
     } else {
-        header("Location: recuperar.php?status=not_found");
+        header("Location: clave_olvidada.php?status=not_found");
         exit();
     }
 }

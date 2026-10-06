@@ -67,6 +67,26 @@ if ($_SESSION){
                 <p class="login-box-msg">
                     Aquí podes recuperar tu contraseña.
                 </p>
+                <!-- Mensajes de estado -->
+                 <?php if (isset($_GET['status'])): ?>
+                  <?php if ($_GET['status'] === 'success'): ?>
+                    <div class="alert alert-success" role="alert">
+                      Se ha enviado un enlace de recuperación a tu correo electrónico.
+                    </div>
+                    <?php elseif ($_GET['status'] === 'not_found'): ?>
+                      <div class="alert alert-warning" role="alert">
+                        El correo ingresado no se encuentra registrado.
+                      </div>
+                      <?php elseif ($_GET['status'] === 'empty'): ?>
+                        <div class="alert alert-danger" role="alert">
+                          Por favor, ingresa tu dirección de correo electrónico.
+                        </div>
+                        <?php elseif ($_GET['status'] === 'mail_error'): ?>
+                          <div class="alert alert-danger" role="alert">
+                            Ocurrió un error al enviar el correo. Por favor, inténtalo más tarde.
+                          </div>
+                          <?php endif; ?>
+                          <?php endif; ?>
                 <form action="recuperar.php" method="post" id="forgotForm">
                     <label class="visually-hidden" for="forgotEmail">Email</label>
                     <div class="input-group mb-3">
