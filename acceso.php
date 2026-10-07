@@ -37,7 +37,7 @@ if (!empty($resultado) && isset($resultado[0]['usu_clave']) && password_verify($
     // ¡Contraseña correcta! Iniciar sesión y guardar variables
     $_SESSION['usu_cod']     = $resultado[0]['usu_cod'];
     $_SESSION['usu_nick']    = $resultado[0]['usu_nick'];
-    $_SESSION['usu_foto']     = $resultado[0]['usu_foto'];
+    $_SESSION['usu_foto']    = $resultado[0]['usu_foto'];
     $_SESSION['emp_cod']     = $resultado[0]['emp_cod'];
     $_SESSION['nombres']     = $resultado[0]['empleado'];
     $_SESSION['cargo']       = $resultado[0]['car_descri'];

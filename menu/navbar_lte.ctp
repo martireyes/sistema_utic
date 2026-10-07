@@ -61,13 +61,13 @@
     <!--Inicio::Menu de usuario desplegable-->
     <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-            <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="user-image rounded-circle shadow" alt="Usuario">
+            <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/default.png";}?>" class="user-image rounded-circle shadow" alt="Usuario">
             <span class="d-none d-md-inline"><?php echo $_SESSION['usu_nick'];?></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
             <!--Inicio::Imagen de usuario-->
             <li class="user-header text-bg-primary">
-                <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/no_disponible.jpg";}?>" class="rounded-circle shadow" alt="Usuario">
+                <img src="<?php if(!empty($_SESSION['usu_foto'])){ echo $_SESSION['usu_foto'];}else{ echo "img/default.png";}?>" class="rounded-circle shadow" alt="Usuario">
                         <p>
                             <?php echo $_SESSION['nombres'];?>
                             <small>Cargo: <?php if(!empty($_SESSION['cargo'])){ echo $_SESSION['cargo'];}else{ echo "No especificado";}?></small>
