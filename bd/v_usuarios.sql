@@ -13,7 +13,8 @@ SELECT
     a.gru_cod,
     d.gru_nombre, 
     a.id_sucursal,
-    e.suc_descri
+    e.suc_descri,
+    a.created_at
 FROM usuarios a
 JOIN empleado b ON a.emp_cod = b.emp_cod
 JOIN cargo c ON b.car_cod = c.car_cod

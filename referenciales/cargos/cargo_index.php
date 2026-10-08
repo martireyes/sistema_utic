@@ -82,200 +82,420 @@
                                         </div>
                                         <?php } ?>
                     </div> -->
+                    <div class="card-body p-0">
+                      <?php
+                      $cargo = consultas::get_datos("select * from cargo");
+                      if (!empty($cargo)) { ?>
+                    <div class="table-responsive">
+                      <table class="table table-hover align-middle m-0">
+                        <thead>
+                          <tr>
+                            <th>Usuario</th>
+                            <th>Correo</th>
+                            <th>Cargo</th>
+                            <th>Estado</th>
+                            <th>Creado</th>
+                            <th class="text-end">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php foreach ($cargo as $car) { ?>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img src="./assets/img/user1-128x128.jpg" alt="" class="img-size-32 rounded-circle me-2" />
+                                <span class="fw-medium">Alexander Pierce</span>
+                              </div>
+                            </td>
+                            <td>alexander.pierce@example.com</td>
+                            <td>
+                              <span class="badge text-bg-danger"> Administrator </span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>Mar 12, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Alexander Pierce"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Alexander Pierce"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user3-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Sarah Bullock</span>
+                              </div>
+                            </td>
+                            <td>sarah.bullock@example.com</td>
+                            <td>
+                              <span class="badge text-bg-primary">Editor</span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>Apr 3, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Sarah Bullock"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Sarah Bullock"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user6-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Daniel Cooper</span>
+                              </div>
+                            </td>
+                            <td>daniel.cooper@example.com</td>
+                            <td>
+                              <span class="badge text-bg-info">Author</span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-warning">Pending</span>
+                            </td>
+                            <td>Apr 28, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Daniel Cooper"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Daniel Cooper"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user4-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Nora Vans</span>
+                              </div>
+                            </td>
+                            <td>nora.vans@example.com</td>
+                            <td>
+                              <span class="badge text-bg-primary">Editor</span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>May 9, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Nora Vans"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Nora Vans"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user7-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Jane Holland</span>
+                              </div>
+                            </td>
+                            <td>jane.holland@example.com</td>
+                            <td>
+                              <span class="badge text-bg-secondary"> Subscriber </span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>May 21, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Jane Holland"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Jane Holland"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user8-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Kenneth Miles</span>
+                              </div>
+                            </td>
+                            <td>kenneth.miles@example.com</td>
+                            <td>
+                              <span class="badge text-bg-info">Author</span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-danger"> Suspended </span>
+                            </td>
+                            <td>Jun 2, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Kenneth Miles"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Kenneth Miles"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user2-160x160.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium"> Nadia Carmichael </span>
+                              </div>
+                            </td>
+                            <td>nadia.carmichael@example.com</td>
+                            <td>
+                              <span class="badge text-bg-secondary"> Subscriber </span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>Jun 15, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Nadia Carmichael"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Nadia Carmichael"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/user5-128x128.jpg"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Marcus Reed</span>
+                              </div>
+                            </td>
+                            <td>marcus.reed@example.com</td>
+                            <td>
+                              <span class="badge text-bg-primary">Editor</span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-warning">Pending</span>
+                            </td>
+                            <td>Jun 24, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Marcus Reed"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Marcus Reed"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <img
+                                  src="./assets/img/avatar5.png"
+                                  alt=""
+                                  class="img-size-32 rounded-circle me-2"
+                                />
+                                <span class="fw-medium">Elena Weber</span>
+                              </div>
+                            </td>
+                            <td>elena.weber@example.com</td>
+                            <td>
+                              <span class="badge text-bg-secondary"> Subscriber </span>
+                            </td>
+                            <td>
+                              <span class="badge text-bg-success">Active</span>
+                            </td>
+                            <td>Jul 1, 2025</td>
+                            <td class="text-end">
+                              <div class="btn-group btn-group-sm">
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-secondary"
+                                  aria-label="Edit Elena Weber"
+                                >
+                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-danger"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#modal-delete-user"
+                                  aria-label="Delete Elena Weber"
+                                >
+                                  <i class="bi bi-trash" aria-hidden="true"> </i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <?php } ?>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                  </div>
+                  <!--end::Card Body-->
+                  <!--begin::Card Footer-->
+                  <div class="card-footer clearfix">
+                    <div class="float-start pt-1 fs-7 text-body-secondary">
+                      Showing 1 to 9 of 42 users
+                    </div>
+                    <ul class="pagination pagination-sm m-0 float-end">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous"> &laquo; </a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next"> &raquo; </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
                 </div>
             </div>
         </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/tabulator-tables@6.4.0/dist/js/tabulator.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const statusBadge = (cell) => {
-        const value = cell.getValue();
-        const map = { Active: 'success', Invited: 'info', Suspended: 'secondary' };
-        const color = map[value] || 'secondary';
-        return `<span class="badge text-bg-${color}">${value}</span>`;
-      };
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const data = [
-          {
-            id: 1,
-            name: 'Olivia Bennett',
-            email: 'olivia@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2024-03-12',
-          },
-          {
-            id: 2,
-            name: 'Liam Carter',
-            email: 'liam@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2024-04-08',
-          },
-          {
-            id: 3,
-            name: 'Emma Dawson',
-            email: 'emma@example.com',
-            role: 'Viewer',
-            status: 'Invited',
-            joined: '2024-06-21',
-          },
-          {
-            id: 4,
-            name: 'Noah Evans',
-            email: 'noah@example.com',
-            role: 'Editor',
-            status: 'Suspended',
-            joined: '2024-07-15',
-          },
-          {
-            id: 5,
-            name: 'Ava Foster',
-            email: 'ava@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2024-08-30',
-          },
-          {
-            id: 6,
-            name: 'Ethan Grant',
-            email: 'ethan@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2024-09-14',
-          },
-          {
-            id: 7,
-            name: 'Sophia Hayes',
-            email: 'sophia@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2024-10-02',
-          },
-          {
-            id: 8,
-            name: 'Mason Ingram',
-            email: 'mason@example.com',
-            role: 'Viewer',
-            status: 'Invited',
-            joined: '2024-11-19',
-          },
-          {
-            id: 9,
-            name: 'Isabella Jones',
-            email: 'isabella@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2025-01-05',
-          },
-          {
-            id: 10,
-            name: 'Lucas Klein',
-            email: 'lucas@example.com',
-            role: 'Viewer',
-            status: 'Suspended',
-            joined: '2025-02-18',
-          },
-          {
-            id: 11,
-            name: 'Mia Lopez',
-            email: 'mia@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2025-03-22',
-          },
-          {
-            id: 12,
-            name: 'Logan Moore',
-            email: 'logan@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2025-04-09',
-          },
-          {
-            id: 13,
-            name: 'Charlotte Nelson',
-            email: 'charlotte@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2025-04-27',
-          },
-          {
-            id: 14,
-            name: 'Henry Owens',
-            email: 'henry@example.com',
-            role: 'Editor',
-            status: 'Invited',
-            joined: '2025-05-11',
-          },
-          {
-            id: 15,
-            name: 'Amelia Price',
-            email: 'amelia@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2025-05-17',
-          },
-        ];
-
-        const table = new Tabulator('#users-table', {
-          data: data,
-          layout: 'fitColumns',
-          pagination: true,
-          paginationSize: 10,
-          paginationSizeSelector: [10, 25, 50, 100],
-          movableColumns: true,
-          columns: [
-            { title: '#', field: 'id', width: 60, headerSort: true },
-            { title: 'Name', field: 'name', headerFilter: 'input' },
-            { title: 'Email', field: 'email', headerFilter: 'input' },
-            {
-              title: 'Role',
-              field: 'role',
-              headerFilter: 'list',
-              headerFilterParams: { values: ['', 'Admin', 'Editor', 'Viewer'] },
-              width: 120,
-            },
-            {
-              title: 'Status',
-              field: 'status',
-              formatter: statusBadge,
-              headerFilter: 'list',
-              headerFilterParams: { values: ['', 'Active', 'Invited', 'Suspended'] },
-              width: 130,
-              hozAlign: 'center',
-            },
-            { title: 'Joined', field: 'joined', sorter: 'date', width: 130 },
-          ],
-        });
-
-        document.getElementById('table-filter').addEventListener('input', (e) => {
-          const value = e.target.value;
-          if (value) {
-            table.setFilter([
-              [
-                { field: 'name', type: 'like', value: value },
-                { field: 'email', type: 'like', value: value },
-              ],
-            ]);
-          } else {
-            table.clearFilter();
-          }
-        });
-
-        document
-          .getElementById('export-csv')
-          .addEventListener('click', () => table.download('csv', 'users.csv'));
-        document
-          .getElementById('export-json')
-          .addEventListener('click', () => table.download('json', 'users.json'));
-        document
-          .getElementById('print-table')
-          .addEventListener('click', () => table.print(false, true));
-      });
-    </script>
 </main>

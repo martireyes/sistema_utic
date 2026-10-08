@@ -5,7 +5,7 @@
     <div class="sidebar-brand">
         <a href="menu.php" class="brand-link">
             <!--Inicio::Imagen logo-->
-            <img src="img/lp3.png" alt="LP3" class="brand-image opacity-75 shadow" />
+            <img src="img/venta_logo.png" alt="LP3" class="brand-image opacity-75 shadow" />
             <!--Fin::Imagen logo-->
             <!--Inicio::Texto del logo-->
             <span class="brand-text fw-light">Compra | Venta</span>
