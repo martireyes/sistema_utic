@@ -20,16 +20,25 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Cargos</h3>
-                    <div class="card-tools">
-                        <div class="input-group input-group-sm" style="width: 16rem">
-                            <span class="input-group-text">
-                                <i class="bi bi-search" aria-hidden="true"></i>
-                            </span>
-                            <input id="table-filter" type="search" class="form-control" placeholder="Filter rows&hellip;" aria-label="Filter rows" />
-                        </div>
-
+                  <div class="row g-2 align-items-center">
+                    <div class="col-12 col-md-4">
+                      <h3 class="card-title">Cargos</h3>
                     </div>
+                    <div class="col-12 col-md-8">
+                      <div class="d-flex flex-wrap justify-content-md-end gap-2">
+                        <div class="input-group input-group-sm w-auto">
+                          <span class="input-group-text">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                          </span>
+                          <input type="search" id="cargo-search" class="form-control" placeholder="Buscar cargos..." style="width: 180px" />
+                        </div>
+                        <a href="menu.php?ruta=referenciales/cargos/cargo_add.php" class="btn btn-sm btn-primary">
+                          <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
+                          Nuevo cargo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="card-body">
                     <div class="d-flex gap-2 mb-3">
