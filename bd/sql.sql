@@ -681,3 +681,16 @@ ADD COLUMN created_at TIMESTAMP(0) WITH TIME ZONE NOT NULL DEFAULT date_trunc('m
 ALTER TABLE cargo
 ADD COLUMN car_estado VARCHAR(10) NOT NULL DEFAULT 'activo',
 ADD CONSTRAINT chk_car_estado_valores CHECK (car_estado IN ('activo', 'inactivo'));
+
+ALTER TABLE cargo 
+ADD COLUMN created_at TIMESTAMP(0) WITH TIME ZONE NOT NULL DEFAULT date_trunc('minute', NOW());
+
+ALTER TABLE cargo
+ADD COLUMN car_estado VARCHAR(10) NOT NULL DEFAULT 'activo',
+ADD CONSTRAINT chk_car_estado_valores CHECK (car_estado IN ('activo', 'inactivo'));
+
+ALTER TABLE cargo 
+ALTER COLUMN created_at TYPE TIMESTAMP(0);
+
+ALTER TABLE cargo 
+ALTER COLUMN created_at SET DEFAULT date_trunc('minute', LOCALTIMESTAMP);

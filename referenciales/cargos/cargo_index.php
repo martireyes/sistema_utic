@@ -106,14 +106,14 @@
                                 </span>
                               </td>
                               <td data-title="Creado"><?php echo $car['created_at'];?></td>
-                              <td class="text-end">
+                              <td data-title="Acciones" class="text-end">
                                 <div class="btn-group btn-group-sm">
-                                  <button type="button" class="btn btn-outline-secondary">
-                                    <i class="bi bi-pencil" aria-hidden="true"> </i>
-                                  </button>
-                                  <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-delete-user">
-                                    <i class="bi bi-trash" aria-hidden="true"> </i>
-                                  </button>
+                                  <a href="cargo_edit.php?vcar_cod=<?php echo $car['car_cod'];?>" class="btn btn-outline-secondary" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                                    <i class="bi bi-pencil" aria-hidden="true"></i>
+                                  </a>
+                                  <a href="cargo_del.php?vcar_cod=<?php echo $car['car_cod'];?>" class="btn btn-outline-danger" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar">
+                                    <i class="bi bi-trash" aria-hidden="true"></i>
+                                  </a>
                                 </div>
                               </td>
                             </tr>
@@ -122,41 +122,28 @@
                         </table>
                       </div>
                       <?php }else { ?>
-                      <div class="alert alert-info flat">
-                        <span class="glyphicon glyphicon-info-sign"></span>
-                        No se han registrado cargos...
+                      <div class="alert alert-info rounded-0 d-flex align-items-center" role="alert">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        <div>No se han registrado cargos...</div>
                         <?php } ?>
                       </div>
-                  <div class="card-footer clearfix">
-                    <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Mostrando del 1 al 9 of 42 users
+                      <div class="card-footer clearfix">
+                        <div class="float-start pt-1 fs-7 text-body-secondary">
+                          Mostrando del 1 al 9 of 42 users
+                        </div>
+                        <ul class="pagination pagination-sm m-0 float-end">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous"> &laquo; </a>
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next"> &raquo; </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <ul class="pagination pagination-sm m-0 float-end">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous"> &laquo; </a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">4</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">5</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next"> &raquo; </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                </div>
                 </div>
             </div>
         </div>
