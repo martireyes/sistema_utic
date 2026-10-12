@@ -1,97 +1,56 @@
 <main class="app-main">
-    <div class="app-content-header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1 class="mb-0 fs-3">Tabla de Cargos</h1>
-                </div>
-                <div class="col-sm-6">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb float-sm-end">
-                            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Tabla de Cargos </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+  <div class="app-content-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1 class="mb-0 fs-3">Cargos</h1>
         </div>
+        <div class="col-sm-6">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb float-sm-end">
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Cargos</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
     </div>
-    <div class="app-content">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header">
-                  <div class="row g-2 align-items-center">
-                    <div class="col-12 col-md-4">
-                      <h3 class="card-title">Cargos</h3>
-                    </div>
-                    <div class="col-12 col-md-8">
-                      <div class="d-flex flex-wrap justify-content-md-end gap-2">
-                        <div class="input-group input-group-sm w-auto">
-                          <span class="input-group-text">
-                            <i class="bi bi-search" aria-hidden="true"></i>
-                          </span>
-                          <input type="search" id="cargo-search" class="form-control" placeholder="Buscar cargos..." style="width: 180px" />
-                        </div>
-                        <a href="menu.php?ruta=referenciales/cargos/cargo_add.php" class="btn btn-sm btn-primary">
-                          <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                          Nuevo cargo
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex gap-2 mb-3">
-                        <button id="export-csv" type="button" class="btn btn-sm btn-outline-secondary">
-                            <i class="bi bi-filetype-csv me-1" aria-hidden="true"></i>
-                            Exportar a CSV
-                        </button>
-                        <button id="export-json" type="button" class="btn btn-sm btn-outline-secondary">
-                            <i class="bi bi-filetype-json me-1" aria-hidden="true"></i>
-                            Exportar a JSON
-                        </button>
-                        <button id="print-table" type="button" class="btn btn-sm btn-outline-secondary">
-                            <i class="bi bi-printer me-1" aria-hidden="true"></i>
-                            Imprimir
-                        </button>
-                    </div>
-                  <!--  <div class="col-md-12 col-xs-12 col-lg-12">
-                        <?php
-                        $cargo = consultas::get_datos("select * from cargo");
-                        if (!empty($cargo)) { ?>
-                                        <div class="table-responsive">
-                                            <table class="table col-lg-12 col-md-12 col-xs-12 table-bordered table-striped table-condensed">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Descripción</th>
-                                                        <th class="text-center">Acciones</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php foreach ($cargo as $car) { ?>
-                                                    <tr>
-                                                        <td data-title="Descripción"><?php echo $car['car_descri'];?></td>
-                                                        <td data-title="Acciones" class="text-center">
-                                                            <a href="cargo_edit.php?vcar_cod=<?php echo $car['car_cod'];?>" class="btn btn-warning btn-sm" role="button" data-title = "Editar" rel="tooltip" data-placement="top">
-                                                                <span class="glyphicon glyphicon-edit"></span>
-                                                            </a>
-                                                            <a href="cargo_del.php?vcar_cod=<?php echo $car['car_cod'];?>" class="btn btn-danger btn-sm" role="button" data-title = "Borrar" rel="tooltip" data-placement="top">
-                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php } ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <?php }else { ?>
-                                        <div class="alert alert-info flat">
-                                            <span class="glyphicon glyphicon-info-sign"></span>
-                                            No se han registrado cargos...
-                                        </div>
-                                        <?php } ?>
-                    </div> -->
-                    <div class="card-body p-0">
+  </div>
+  <div class="app-content">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Cargos</h3>
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 16rem">
+              <span class="input-group-text">
+                <i class="bi bi-search" aria-hidden="true"></i>
+              </span>
+              <input id="table-filter" type="search" class="form-control" placeholder="Filtrar registros..." aria-label="Filter rows" />
+              <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-cargo" >
+                <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
+                Nuevo cargo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="d-flex gap-2 mb-3">
+            <button id="export-csv" type="button" class="btn btn-sm btn-outline-secondary">
+              <i class="bi bi-filetype-csv me-1" aria-hidden="true"></i>
+              Exportar a CSV
+            </button>
+            <button id="export-json" type="button" class="btn btn-sm btn-outline-secondary">
+              <i class="bi bi-filetype-json me-1" aria-hidden="true"></i>
+              Exportar a JSON
+            </button>
+            <button id="print-table" type="button" class="btn btn-sm btn-outline-secondary">
+              <i class="bi bi-printer me-1" aria-hidden="true"></i>
+              Imprimir
+            </button>
+          </div>
+          <div id="cargo-table"></div>
+          <!-- <div class="card-body p-0">
                       <?php
                       $cargo = consultas::get_datos("select * from cargo");
                       if (!empty($cargo)) { ?>
@@ -152,9 +111,43 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-        </div>
+            <!--INICIO: Modal para agregar cargo-->
+            <div class="modal fade" id="modal-add-cargo" tabindex="-1" aria-labelledby="modal-add-cargo-label" aria-hidden="true" >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <form action="referenciales/cargos/cargo_control.php" method="post" accept-charset="utf-8">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-add-cargo-label">Agregar nuevo cargo</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <input type="hidden" name="accion" value="1">
+                        <label for="vcar_descri" class="form-label"> Descripción </label>
+                        <input type="text" name="vcar_descri" class="form-control" id="vcar_descri" placeholder="Ej: Administrador" required />
+                      </div>
+                      <div class="mb-3">
+                        <label for="vcar_estado" class="form-label"> Estado </label>
+                        <select id="vcar_estado" name="vcar_estado" class="form-select">
+                          <option selected>activo</option>
+                          <option>inactivo</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                      </button>
+                      <button type="submit" class="btn btn-primary">Registrar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!--FIN:: Modal para agregar cargo-->
     </div>
+</div>
 </main>

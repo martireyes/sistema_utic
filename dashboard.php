@@ -1,27 +1,27 @@
 <!--Inicio::Encabezado de la app-->
-                <div class="app-content-header">
-                    <!--Inicio::Contenedor-->
-                    <div class="container-fluid">
-                        <!--Inicio::fila-->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h1 class="mb-0 fs-3">Dashboard</h1>
-                            </div>
-                            <div class="col-sm-6">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb float-sm-end">
-                                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                        <!--Fin::Fila-->
-                    </div>
-                    <!--Fin::Contenedor-->
-                </div>
-                <!--Fin::Encabezado de la app-->
-                <!--Inicio::Contenido de la app-->
+<div class="app-content-header">
+    <!--Inicio::Contenedor-->
+    <div class="container-fluid">
+        <!--Inicio::fila-->
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="mb-0 fs-3">Dashboard</h1>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!--Fin::Fila-->
+    </div>
+    <!--Fin::Contenedor-->
+</div>
+<!--Fin::Encabezado de la app-->
+<!--Inicio::Contenido de la app-->
                 <div class="app-content">
                     <!--Inicio::Contenedor-->
                     <div class="container-fluid">

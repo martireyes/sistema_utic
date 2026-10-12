@@ -1,12 +1,6 @@
-<script
-    src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous" >
-</script>
-<script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous">
-</script>
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" crossorigin="anonymous" >
-</script>
+<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js" crossorigin="anonymous" > </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"> </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" crossorigin="anonymous" > </script>
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.9.1/dist/js/adminlte.min.js"></script>
 <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
@@ -61,9 +55,127 @@
         });
       })();
 </script>
-<script
-    src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js" crossorigin="anonymous" >
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.5.0/dist/js/tabulator.min.js"></script>
+<script>
+  const statusBadge = (cell) => {
+    const value = cell.getValue();
+    const map = { activo: 'success', inactivo: 'danger' };
+    const color = map[value] || 'danger';
+    return `<span class="badge text-bg-${color}">${value}</span>`;
+  };
+
+  const express = require('express');
+  const { Pool } = require('pg');
+  const cors = require('cors');
+  const app = express();
+  app.use(cors());
+  app.use(express.json());
+  // Configuración de la conexión a tu base de datos lp3 en PostgreSQL
+  const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'lp3',
+    password: '123',
+    port: 5432,
+  });
+
+  // Endpoint para listar los datos
+  app.get('/api/cargos', async (req, res) => {
+    try {
+      const query = 'SELECT car_cod, car_descri, created_at, car_estado FROM cargos ORDER BY car_cod ASC';
+      const { rows } = await pool.query(query);
+      res.json(rows);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Error al obtener los datos de la base de datos' });
+    }
+  });
+  app.listen(3000, () => {
+    console.log('Servidor corriendo en http://localhost:3000');
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+        const tabla = new Tabulator('#cargo-table', {
+          ajaxURL: 'http://localhost:3000/api/cargos', // URL de tu API Node.js
+          layout: 'fitColumns',
+          pagination: true,
+          paginationSize: 5,
+          paginationSizeSelector: [5, 10, 25, 50],
+          movableColumns: true,
+          placeholder: 'Cargando datos...',
+          columns: [
+            { title: 'Código', field: 'car_cod', width: 90, headerSort: true, hozAlign: 'center' },
+            { title: 'Descripción', field: 'car_descri', headerFilter: 'input' },
+            { title: 'Creado el', field: 'created_at', sorter: 'datetime', width: 180, hozAlign: 'center' },
+            { 
+              title: 'Estado', 
+              field: 'car_estado', 
+              formatter: statusBadge,
+              headerFilter: 'list',
+              headerFilterParams: { values: ['', 'activo', 'inactivo'] },
+              width: 140,
+              hozAlign: 'center',
+            },
+          ],
+        });
+
+        const table = new Tabulator('#cargo-table', {
+          data: data,
+          layout: 'fitColumns',
+          pagination: true,
+          paginationSize: 10,
+          paginationSizeSelector: [10, 25, 50, 100],
+          movableColumns: true,
+          columns: [
+            { title: '#', field: 'id', width: 60, headerSort: true },
+            { title: 'Name', field: 'name', headerFilter: 'input' },
+            { title: 'Email', field: 'email', headerFilter: 'input' },
+            {
+              title: 'Role',
+              field: 'role',
+              headerFilter: 'list',
+              headerFilterParams: { values: ['', 'Admin', 'Editor', 'Viewer'] },
+              width: 120,
+            },
+            {
+              title: 'Status',
+              field: 'status',
+              formatter: statusBadge,
+              headerFilter: 'list',
+              headerFilterParams: { values: ['', 'Active', 'Invited', 'Suspended'] },
+              width: 130,
+              hozAlign: 'center',
+            },
+            { title: 'Joined', field: 'joined', sorter: 'date', width: 130 },
+          ],
+        });
+
+        document.getElementById('table-filter').addEventListener('input', (e) => {
+          const value = e.target.value;
+          if (value) {
+            table.setFilter([
+              [
+                { field: 'name', type: 'like', value: value },
+                { field: 'email', type: 'like', value: value },
+              ],
+            ]);
+          } else {
+            table.clearFilter();
+          }
+        });
+
+        document
+          .getElementById('export-csv')
+          .addEventListener('click', () => table.download('csv', 'users.csv'));
+        document
+          .getElementById('export-json')
+          .addEventListener('click', () => table.download('json', 'users.json'));
+        document
+          .getElementById('print-table')
+          .addEventListener('click', () => table.print(false, true));
+      });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js" crossorigin="anonymous" > </script>
 <script>
       new Sortable(document.querySelector('.connectedSortable'), {
         group: 'shared',
@@ -75,9 +187,7 @@
         cardHeader.style.cursor = 'move';
       });
 </script>
-<script
-    src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js" integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous" >
-</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js" integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous" > </script>
 <script>
       const sales_chart_options = {
         series: [
@@ -133,201 +243,8 @@
       );
       sales_chart.render();
 </script>
-<script
-    src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js" integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous" >
-</script>
-<script
-    src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js" integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous" >
-</script>
-
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"2437d112162f4ec4b63c3ca0eb38fb20","r":1,"spa":2}' crossorigin="anonymous">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js" integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous" > </script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js" integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous" > </script>
+<!-- <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"2437d112162f4ec4b63c3ca0eb38fb20","r":1,"spa":2}' crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/tabulator-tables@6.4.0/dist/js/tabulator.min.js"></script>
-<script>
-      const statusBadge = (cell) => {
-        const value = cell.getValue();
-        const map = { Active: 'success', Invited: 'info', Suspended: 'secondary' };
-        const color = map[value] || 'secondary';
-        return `<span class="badge text-bg-${color}">${value}</span>`;
-      };
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const data = [
-          {
-            id: 1,
-            name: 'Olivia Bennett',
-            email: 'olivia@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2024-03-12',
-          },
-          {
-            id: 2,
-            name: 'Liam Carter',
-            email: 'liam@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2024-04-08',
-          },
-          {
-            id: 3,
-            name: 'Emma Dawson',
-            email: 'emma@example.com',
-            role: 'Viewer',
-            status: 'Invited',
-            joined: '2024-06-21',
-          },
-          {
-            id: 4,
-            name: 'Noah Evans',
-            email: 'noah@example.com',
-            role: 'Editor',
-            status: 'Suspended',
-            joined: '2024-07-15',
-          },
-          {
-            id: 5,
-            name: 'Ava Foster',
-            email: 'ava@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2024-08-30',
-          },
-          {
-            id: 6,
-            name: 'Ethan Grant',
-            email: 'ethan@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2024-09-14',
-          },
-          {
-            id: 7,
-            name: 'Sophia Hayes',
-            email: 'sophia@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2024-10-02',
-          },
-          {
-            id: 8,
-            name: 'Mason Ingram',
-            email: 'mason@example.com',
-            role: 'Viewer',
-            status: 'Invited',
-            joined: '2024-11-19',
-          },
-          {
-            id: 9,
-            name: 'Isabella Jones',
-            email: 'isabella@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2025-01-05',
-          },
-          {
-            id: 10,
-            name: 'Lucas Klein',
-            email: 'lucas@example.com',
-            role: 'Viewer',
-            status: 'Suspended',
-            joined: '2025-02-18',
-          },
-          {
-            id: 11,
-            name: 'Mia Lopez',
-            email: 'mia@example.com',
-            role: 'Editor',
-            status: 'Active',
-            joined: '2025-03-22',
-          },
-          {
-            id: 12,
-            name: 'Logan Moore',
-            email: 'logan@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2025-04-09',
-          },
-          {
-            id: 13,
-            name: 'Charlotte Nelson',
-            email: 'charlotte@example.com',
-            role: 'Admin',
-            status: 'Active',
-            joined: '2025-04-27',
-          },
-          {
-            id: 14,
-            name: 'Henry Owens',
-            email: 'henry@example.com',
-            role: 'Editor',
-            status: 'Invited',
-            joined: '2025-05-11',
-          },
-          {
-            id: 15,
-            name: 'Amelia Price',
-            email: 'amelia@example.com',
-            role: 'Viewer',
-            status: 'Active',
-            joined: '2025-05-17',
-          },
-        ];
-
-        const table = new Tabulator('#users-table', {
-          data: data,
-          layout: 'fitColumns',
-          pagination: true,
-          paginationSize: 10,
-          paginationSizeSelector: [10, 25, 50, 100],
-          movableColumns: true,
-          columns: [
-            { title: '#', field: 'id', width: 60, headerSort: true },
-            { title: 'Name', field: 'name', headerFilter: 'input' },
-            { title: 'Email', field: 'email', headerFilter: 'input' },
-            {
-              title: 'Role',
-              field: 'role',
-              headerFilter: 'list',
-              headerFilterParams: { values: ['', 'Admin', 'Editor', 'Viewer'] },
-              width: 120,
-            },
-            {
-              title: 'Status',
-              field: 'status',
-              formatter: statusBadge,
-              headerFilter: 'list',
-              headerFilterParams: { values: ['', 'Active', 'Invited', 'Suspended'] },
-              width: 130,
-              hozAlign: 'center',
-            },
-            { title: 'Joined', field: 'joined', sorter: 'date', width: 130 },
-          ],
-        });
-
-        document.getElementById('table-filter').addEventListener('input', (e) => {
-          const value = e.target.value;
-          if (value) {
-            table.setFilter([
-              [
-                { field: 'name', type: 'like', value: value },
-                { field: 'email', type: 'like', value: value },
-              ],
-            ]);
-          } else {
-            table.clearFilter();
-          }
-        });
-
-        document
-          .getElementById('export-csv')
-          .addEventListener('click', () => table.download('csv', 'users.csv'));
-        document
-          .getElementById('export-json')
-          .addEventListener('click', () => table.download('json', 'users.json'));
-        document
-          .getElementById('print-table')
-          .addEventListener('click', () => table.print(false, true));
-      });
-    </script>
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.5.0/dist/js/tabulator.min.js"></script>
