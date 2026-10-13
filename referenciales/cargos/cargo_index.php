@@ -49,23 +49,22 @@
               Imprimir
             </button>
           </div>
-          <div id="cargo-table"></div>
-          <!-- <div class="card-body p-0">
-                      <?php
-                      $cargo = consultas::get_datos("select * from cargo");
-                      if (!empty($cargo)) { ?>
-                      <div class="table-responsive">
-                        <table class="table table-hover align-middle m-0">
-                          <thead>
-                            <tr>
-                              <th>Descripción</th>
-                              <th>Estado</th>
-                              <th>Creado</th>
-                              <th class="text-end">Acciones</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <?php foreach ($cargo as $car) { ?>
+          <div class="card-body p-0">
+            <?php
+            $cargo = consultas::get_datos("select * from cargo");
+            if (!empty($cargo)) { ?>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle m-0">
+                <thead>
+                  <tr>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Creado</th>
+                    <th class="text-end">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($cargo as $car) { ?>
                             <tr>
                               <td data-title="Descripción"><?php echo $car['car_descri'];?></td>
                               <td data-title="Estado">
@@ -111,7 +110,7 @@
                           </li>
                         </ul>
                       </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <!--INICIO: Modal para agregar cargo-->
